@@ -1,0 +1,29 @@
+#!/bin/bash
+
+case "$1" in
+  add)
+    echo "$3,$4" >> "$2"
+    ;;
+  sum)
+    echo
+    hours=$(cut -d "," -f 1 "$2")
+    printf "    %5.2f\n" $hours
+    echo "   ——————"
+    echo $hours \
+      | tr " " "\n" \
+      | awk '{s += $1} END {print s}' \
+      | xargs printf "    %5.2f total\n"
+    echo
+    ;;
+  *)
+    cat <<- EOF
+Super-simple time tracker for your terminal
+
+  To add a task you've spent time on:
+    trak add project.csv 5.5 \"Pushing node_modules to Git\"
+
+  To see the summary:
+    trak sum project.csv
+
+EOF
+esac
