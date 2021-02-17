@@ -12,7 +12,7 @@ case "$1" in
     echo $hours \
       | tr " " "\n" \
       | awk '{s += $1} END {print s}' \
-      | xargs printf "    %5.2f total\n"
+      | xargs printf "    %5.2f hours total\n"
     echo
     ;;
   *)
