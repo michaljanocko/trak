@@ -20,7 +20,7 @@ case "$1" in
 Super-simple time tracker for your terminal
 
   To add a task you've spent time on:
-    trak add project.csv 5.5 \"Pushing node_modules to Git\"
+    trak add project.csv 5.5 "Pushing node_modules to Git"
 
   To see the summary:
     trak sum project.csv
