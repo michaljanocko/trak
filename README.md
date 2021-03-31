@@ -4,7 +4,8 @@
 
 ## Installation
 
-🍎: `brew install michaljanocko/pilsner/trak`
+- 🍎: `brew install michaljanocko/pilsner/trak`
+- 🐧: `paru -S trak` (from the AUR on Arch-based distros)
 
 Otherwise, just add it to your `$PATH`.
 
